@@ -62,11 +62,15 @@
          <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
             <Label Style="{StaticResource listHeaderTextStyle}">Names</Label>
         </Border>
-        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2">
+        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2"
+                 ItemsSource="{Binding Source={StaticResource ExpenseDataSource}, XPath=Person}"
+                 ItemTemplate="{StaticResource nameItemTemplate}">
+            <!-- 
             <ListBoxItem>Mike</ListBoxItem>
             <ListBoxItem>Lisa</ListBoxItem>
             <ListBoxItem>John</ListBoxItem>
             <ListBoxItem>Mary</ListBoxItem>
+            -->
         </ListBox>
         <Button Grid.Column="1" Grid.Row="3" Click="Button_Click" Style="{StaticResource buttonStyle}">View</Button>
     </Grid>

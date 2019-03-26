@@ -37,7 +37,9 @@ namespace ExpenseIt
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ExpenseReportPage expenseReportPage = new ExpenseReportPage();
+            // Create a new page of that class with the constructor argument, then navigate to the new page
+            // This page is instantiated, it does not constantly exist in the same way as a static WinForm. It will automatically gather design code.
+            ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem); // Found the data context object!!
             this.NavigationService.Navigate(expenseReportPage);
         }
     }

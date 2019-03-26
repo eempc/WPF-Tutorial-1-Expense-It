@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+// Has XML confused me, yep!
+
 namespace ExpenseIt
 {
     /// <summary>
@@ -23,6 +25,11 @@ namespace ExpenseIt
         public ExpenseReportPage()
         {
             InitializeComponent();
+        }
+
+        public ExpenseReportPage(object data):this()
+        {
+            this.DataContext = data; // Where did this DataContext come from? Also what is in it? It will be passed in as an argument from the button
         }
     }
 }
