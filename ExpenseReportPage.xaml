@@ -23,7 +23,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18" Foreground="#0066cc">
+        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}">
             Expense Report For:
         </Label>
 
@@ -40,17 +40,17 @@
             
             <!--Name-->
             <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
-                <Label Margin="0,0,0,5" FontWeight="Bold" Background="#FF9B3333">Name:</Label>
-                <Label Margin="0,0,0,5" FontWeight="Bold">.</Label>
+                <Label Style="{StaticResource labelStyle}">Name:</Label>
+                <Label Style="{StaticResource labelStyle}">.</Label>
             </StackPanel>
 
             <!--Dept-->
             <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
-                <Label Margin="0,0,0,5" FontWeight="Bold" Background="#FFC96464">Department</Label>
-                <Label Margin="0,0,0,5" FontWeight="Bold">.</Label>
+                <Label Style="{StaticResource labelStyle}">Department</Label>
+                <Label Style="{StaticResource labelStyle}">.</Label>
             </StackPanel>
        
-            <!--Grid within grid for expenses table-->
+            <!--Grid within grid for expenses table using an inserted style section instead of the 'css' or inline style-->
             <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left">
                 <DataGrid AutoGenerateColumns="False" RowHeaderWidth="0">
                     <DataGrid.ColumnHeaderStyle>

@@ -19,6 +19,9 @@ using System.Windows.Shapes;
 // Then adds a heading label to the top row, a listbox of names to second row and a button to third row
 // Assignments are done with the element's tag
 // This numbering system begins at 0, amazing!
+// XAML based CSS-like styling
+// Adding data in the XML file, but why? Why would I do that instead of in code or in database or via file.
+// Data templates overview information
 
 namespace ExpenseIt
 {
